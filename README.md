@@ -5,7 +5,7 @@ Aplicativo mobile para controle de senhas em laboratórios médicos.
 ## 🖼️ Telas do Aplicativo
 
 ### Tela 1 – Totem (Cliente)
-![Tela Totem](src/assets/icons/tela_totem.png)
+![Tela Totem](src/assets/icon/tela_totem.png)
 
 Nesta tela, o cliente escolhe o tipo de atendimento desejado entre Prioritário (SP), Geral (SG) ou Exames (SE). Ao clicar, uma nova senha é emitida e exibida na tela. É o ponto de entrada para o usuário no sistema de senhas.
 
