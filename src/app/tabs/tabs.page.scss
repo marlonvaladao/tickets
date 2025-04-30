@@ -1,1 +1,27 @@
+ion-tab-bar {
+  height: 60px;
+  font-size: 12px;
+  --padding-bottom: 2px;
+  --padding-top: 2px;
+  --border: none;
 
+  ion-tab-button {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    ion-icon,
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    ion-label {
+      font-size: 11px;
+      margin-top: 2px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+  }
+}

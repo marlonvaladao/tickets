@@ -1,17 +1,56 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      <app-header-uninassau></app-header-uninassau>
     </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding"> 
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="titulo-centralizado">Chamar Próxima Senha</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="centralizar">
+    <div class="centralizar-botao">
+      <ion-button class="botao-alerta" (click)="chamarSenha()">Chamar Senha</ion-button>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    </div>
+    <div class="centralizar-texto" *ngIf="senhaAtual">
+      <ion-text>
+        <h2>Senha Chamando: {{ senhaAtual }}</h2>
+      </ion-text>
+    </div>
+  </ion-card-content>
+</ion-card>
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title class="titulo-centralizado">Finalizar Atendimento</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="centralizar">
+    <div class="centralizar-botao">
+      <ion-button class="botao-alerta" (click)="finalizarAtendimento()">Finalizar</ion-button>
+    </div>
+  </ion-card-content>
+</ion-card> 
+
+
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>Senhas emitidas: {{senhasService.senhasTotal}}</ion-item>
+        <ion-item>Senhas Geral: {{senhasService.senhasGeral}}</ion-item>
+        <ion-item>Senhas Prioritárias: {{senhasService.senhasPrior}}</ion-item>
+        <ion-item>Senhas Exame: {{senhasService.senhasExame}}</ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
 </ion-content>

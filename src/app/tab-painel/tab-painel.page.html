@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <app-header-uninassau></app-header-uninassau>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content>
+  
+  
+  <ion-content class="ion-padding">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="titulo-centralizado">Senhas em Espera</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="centralizar">
+              <ion-list>
+                <ion-item class="item-senha" *ngFor="let senha of senhasService.getSenhasEmEspera()">
+                  {{ senha.split('-')[1] }}
+                </ion-item>
+                
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+  
+        <ion-col size="6">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title class="titulo-centralizado">Últimas Senhas Chamadas</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="centralizar">
+              <ion-list>
+                <ion-item class="item-senha" *ngFor="let item of senhasService.ultimasChamadas">
+                  {{ item.senha.split('-')[1] }} - Guichê {{ item.guiche }}
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tempo Médio de Atendimento</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="centralizar">
+      <ion-list>
+        <ion-item>
+          SP (Prioritária): {{ senhasService.formatarTempo(senhasService.calcularTempoMedio('SP')) }}
+        </ion-item>
+        <ion-item>
+          SG (Geral): {{ senhasService.formatarTempo(senhasService.calcularTempoMedio('SG')) }}
+        </ion-item>
+        <ion-item>
+          SE (Exame): {{ senhasService.formatarTempo(senhasService.calcularTempoMedio('SE')) }}
+        </ion-item>
+        
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+ 
+  
+  
+  
+
+</ion-content>

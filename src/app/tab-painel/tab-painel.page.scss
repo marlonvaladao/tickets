@@ -1,0 +1,120 @@
+ion-header {
+    --background: #00bcd4;
+    color: white;
+  }
+  
+  ion-toolbar {
+    --background: #00bcd4;
+  }
+  
+  ion-title {
+    color: white;
+    font-weight: bold;
+  }
+  ion-row {
+    --ion-grid-padding: 0;
+    --ion-grid-column-padding: 4px; /* Bem próximo */
+  }
+  
+  ion-col {
+    padding: 0 4px; /* Reduz ainda mais o espaço entre os cards */
+  }
+  
+  ion-card {
+    margin: 0; /* Remove margem extra dos cards */
+  }
+  ion-card-title.titulo-centralizado {
+    font-size: 16px; /* ou 14px se quiser menor ainda */
+  }
+  ion-item {
+    font-size: 14px; /* ou 12px se quiser menor ainda */
+  }
+  .card-espera {
+    width: 45%;
+    margin-right: 10px;
+  }
+  
+  .card-ultimas {
+    width: 55%;
+  }
+  .linha-cards {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card-espera {
+    width: 40%;
+    min-width: 260px;
+  }
+  
+  .card-ultimas {
+    width: 55%;
+    min-width: 300px;
+  }
+  .linha-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap; // deixa responsivo
+  }
+  
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-espera {
+    width: 35%;
+    min-width: 200px;
+  }
+  
+  .card-ultimas {
+    width: 60%;
+    min-width: 250px;
+  }
+  
+  ion-card-title.pequeno {
+    font-size: 14px;
+  }
+  
+  ion-item {
+    font-size: 13px;
+  }
+  .painel-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .card-espera {
+    width: 35%;
+    min-width: 200px;
+  }
+  
+  .card-ultimas {
+    width: 60%;
+    min-width: 250px;
+  }
+  
+  .titulo-pequeno {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  ion-item {
+    font-size: 13px;
+  }
+ 
+  .item-senha {
+    font-size: 14px;
+    --min-height: 30px; /* reduz a altura mínima do item */
+    padding-top: -1px;
+    padding-bottom: -1px;
+  }
+  

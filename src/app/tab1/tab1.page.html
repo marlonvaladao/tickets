@@ -1,17 +1,48 @@
-<ion-header [translucent]="true">
+
+
+<ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      <app-header-uninassau></app-header-uninassau>
     </ion-title>
+    
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Clique nas opções abaixo para gerar sua senha: </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="botao-alerta">
+      <div class="coluna-botoes">
+        <ion-button class="botao-alerta" (click)="gerarSenha('SG')">Senha Geral</ion-button>
+        <ion-button class="botao-alerta" (click)="gerarSenha('SP')">Senha Preferencial</ion-button>
+        <ion-button class="botao-alerta" (click)="gerarSenha('SE')">Resultado de Exames</ion-button>
+
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Última Senha Gerada:</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content class="centralizar">
+      <ion-input
+  readonly="true"
+  label=""
+  [value]="formatarUltimaSenha(senhasService.inputNovaSenha)">
+</ion-input>
+
+    </ion-card-content>
+  </ion-card>
+  
+  
+    
+
 </ion-content>

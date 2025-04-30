@@ -5,6 +5,18 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'tab-painel',
+    loadChildren: () => import('./tab-painel/tab-painel.module').then( m => m.TabPainelPageModule)
+  },
+  {
+    path: 'tab-painel',
+    loadChildren: () => import('./tab-painel/tab-painel.module').then( m => m.TabPainelPageModule)
+  },
+  {
+    path: 'tab4',
+    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
   }
 ];
 @NgModule({
